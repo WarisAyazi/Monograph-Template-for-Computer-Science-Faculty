@@ -1,0 +1,85 @@
+%*************************************
+% Title Page Formatting Package
+%*************************************
+\ProvidesPackage{StylesAndSettings/uqtitle}[2018/03/19 v.01]
+\RequirePackage{graphicx}
+%This package formats the front matter for theses at
+%The University of Queensland.
+%Based on https://en.wikibooks.org/wiki/LaTeX/Title_Creation
+
+%*************************************
+% Define new 'storing' commands and set defaults.
+%*************************************
+%Current degree.
+\newcommand*{\higer}[1]{\gdef\@higer{#1}}
+\newcommand*{\@higer}{
+
+Kabul University \\ 
+Faculty of Computer Science \\
+Department of Information Systems\\
+}
+
+%Degree you are submitting for.
+\newcommand*{\supervisor}[1]{\gdef\@supervisor{#1}}
+\newcommand*{\@supervisor}{kkkk}
+
+
+
+%Renew the maketitle command.
+\renewcommand*{\maketitle}{%
+
+%*************************************
+% Title Page layout
+%*************************************
+\pagestyle{empty}	
+%Suppress the header.
+\rmfamily					
+%Make sure we have Roman font family.
+
+%Include the university shield.
+%CHANGE TO EPS IF REQUIRED.
+\noindent
+\vfill
+\begin{center}
+	\includegraphics[width=.30\textwidth]{./StylesAndSettings/Logo}
+\end{center}
+
+
+\begin{center}
+	\Huge
+	\@higer{}
+\end{center}
+
+
+\vspace{20 pt}
+
+\begin{center}
+    \Huge\bfseries
+	\thetitle
+\end{center}
+
+\vspace{30 pt}
+
+\begin{center}
+	\Large
+	\textit{A Monograph Submitted in Partial Fulfillment of \\
+	the Requirements for the Award of the Degree of\\
+	Bachelor of Information Systems in Computer Science.}
+\end{center}
+
+  
+
+\vspace{40 pt}
+
+\begin{flushleft}
+	 \Large
+	 	By:  \theauthor \\
+		Supervised By: \@supervisor{} \\
+		Date: \thedate{}\\
+	\Large
+
+
+\end{flushleft}
+
+\clearpage
+}

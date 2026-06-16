@@ -1,0 +1,369 @@
+\chapter[Introduction]{Introduction}
+\label{Chap:Intro}
+\counterwithout{table}{chapter} % This ensures table numbering doesn't include the Chapter number through the document
+\counterwithout{figure}{chapter}
+
+\makeatletter
+\setlength{\@fptop}{0pt} % This sets figures to the top of a page
+\makeatother
+
+% ***************************************************
+% Introduction
+% ***************************************************
+
+% ********* Enter your text below this line: ********
+\section{What is Sign language?}
+Sign languages (also known as signed language) are languages that use the visual gestural modality to convey meaning through manual articulations in combination with
+non-manual elements like the face and body. Afghan Sign Language (ASL)
+is not a visual form of Afghani languages(Pashto or Dari) but its own unique language.
+Sign Language Processing is an emerging field of
+artificial intelligence concerned with the automatic processing and analysis of sign
+language content. While research has focused more on the visual aspects of signed
+languages, it is a subfield of both Natural Language Processing (NLP) and Computer
+Vision (CV).
+
+Challenges in sign language processing often include machine translation of
+sign language videos into spoken language text (sign language translation), from spoken
+language text (sign language production), or sign language recognition for sign language
+understanding.
+
+
+
+(Brief) History of Signed Languages and Deaf Culture
+
+Throughout modern history, spoken languages were dominant, so much so that signed
+languages struggled to be recognized as languages in their own right, and educators
+developed misconceptions that signed language acquisition might hinder the
+development of speech skills. For example, in 1880, a large international conference of
+deaf educators called the “Second International Congress on Education of the Deaf”
+banned teaching signed languages, favoring speech therapy instead. It was not until the
+seminal work on American Sign Language (ASL) by Stokoe Jr (1960) that signed languages
+started gaining recognition as natural, independent, and well-defined languages, which
+inspired other researchers to further explore signed languages as a research area.
+Nevertheless, antiquated attitudes that placed less importance on signed languagescontinue to inflict harm and subject many to linguistic neglect (Humphries et al. 2016).
+Several studies have shown that deaf children raised solely with spoken languages do not
+gain enough access to a first language during their critical period of language
+acquisition (Murray, Hall, and Snoddon 2020). This language deprivation can lead to life-
+long consequences on the cognitive, linguistic, socio-emotional, and academic
+development of the deaf (Hall, Levin, and Anderson 2017).
+Signed languages are the primary languages of communication for the Deaf1 and are at
+the heart of Deaf communities. In the past, the failure to recognize signed languages as
+fully-fledged natural language systems in their own right has had detrimental effects, and
+in an increasingly digitized world, NLP research should strive to enable a world in which
+all people, including the Deaf, have access to languages that fit their lived experience.
+Sign Language Linguistics Overview
+Signed languages consist of phonological, morphological, syntactic, and semantic levels
+of structure that fulfill the same social, cognitive, and communicative purposes as other
+natural languages. While spoken languages primarily channel the oral-auditory modality,
+signed languages use the visual-gestural modality, relying on the signer’s face, hands,
+body, and space around them to create distinctions in meaning. We present the linguistic
+features of signed languages2 that researchers must consider during their modeling.
+Phonology
+Signs are composed of minimal units that combine manual features such as hand configuration,
+palm orientation, placement, contact, path movement, local movement, as well as non-manual
+features including eye aperture, head movement, and torso positioning (Liddell and Johnson 1989;
+Johnson and Liddell 2011; Brentari 2011; Sandler 2012). Not all possible phonemes are realized
+in both signed and spoken languages, and inventories of two languages’ phonemes/features may
+not overlap completely. Different languages are also subject to rules for the allowed combinations
+of features.
+Simultaneity
+Though an ASL sign takes about twice as long to produce than an English word, the rates of
+transmission of information between the two languages are similar (Bellugi and Fischer 1972).
+One way signed languages compensate for the slower production rate of signs is through
+simultaneity: Signed languages use multiple visual cues to convey different information
+simultaneously (Sandler 2012). For example, the signer may produce the sign for “cup” on one
+hand while simultaneously pointing to the actual cup with the other to express “that cup.” Similarly
+to tone in spoken languages, the face and torso can convey additional affective
+information (Liddell and others 2003; Johnston and Schembri 2007). Facial expressions can
+modify adjectives, adverbs, and verbs; a head shake can negate a phrase or sentence; eye direction
+can help indicate referents.Referencing
+The signer can introduce referents in discourse either by pointing to their actual locations in space
+or by assigning a region in the signing space to a non-present referent and by pointing to this region
+to refer to it (Rathmann and Mathur 2011; Schembri, Cormier, and Fenlon 2018). Signers can also
+establish relations between referents grounded in signing space by using directional signs or
+embodying the referents using body shift or eye gaze (Dudis 2004; Liddell and Metzger 1998).
+Spatial referencing also impact morphology when the directionality of a verb depends on the
+location of the reference to its subject and/or object (Beuzeville 2008; Fenlon, Schembri, and
+Cormier 2018): For example, a directional verb can move from its subject’s location and end at its
+object’s location. While the relation between referents and verbs in spoken language is more
+arbitrary, referent relations are usually grounded in signed languages. The visual space is heavily
+exploited to make referencing clear.
+Another way anaphoric entities are referenced in sign language is by using classifiers or depicting
+signs (Supalla 1986; Wilcox and Hafer 2004; Roy 2011) that help describe the characteristics of
+the referent. Classifiers are typically one-handed signs that do not have a particular location or
+movement assigned to them, or derive features from meaningful discourse (Liddell and
+others 2003), so they can be used to convey how the referent relates to other entities, describe its
+movement, and give more details. For example, to tell about a car swerving and crashing, one
+might use the hand classifier for a vehicle, move it to indicate swerving, and crash it with another
+entity in space.
+To quote someone other than oneself, signers perform role shift (Cormier, Smith, and Sevcikova-
+Sehyr 2015), where they may physically shift in space to mark the distinction and take on some
+characteristics of the people they represent. For example, to recount a dialogue between a taller
+and a shorter person, the signer may shift to one side and look up when taking the shorter person’s
+role, shift to the other side and look down when taking the taller person’s role.
+Fingerspelling
+Fingerspelling results from language contact between a signed language and a surrounding spoken
+language written form (Battison 1978; Wilcox 1992; Brentari and Padden 2001; Patrie and
+Johnson 2011). A set of manual gestures correspond with a written orthography or phonetic
+system. This phenomenon, found in most signed languages, is often used to indicate names or
+places or new concepts from the spoken language but has often become integrated into the signed
+languages as another linguistic strategy (Padden 1998; Montemurro and Brentari 2018).
+Sign Language Representations
+Representation is a significant challenge for SLP. Unlike spoken languages, signed
+languages have no widely adopted written form. As signed languages are conveyed
+through the visual-gestural modality, video recording is the most straightforward way to
+capture them. However, as videos include more information than needed for modelingand are expensive to record, store, and transmit, a lower-dimensional representation has
+been sought after.
+The following figure illustrates each signed language representation we will describe
+below. In this demonstration, we deconstruct the video into its individual frames to
+exemplify the alignment of the annotations between the video and representations.
+Videos
+are the most straightforward representation of a signed language and can amply incorporate the
+information conveyed through signing. One major drawback of using videos is their high
+dimensionality: They usually include more information than needed for modeling and are
+expensive to store, transmit, and encode. As facial features are essential in sign, anonymizing raw
+videos remains an open problem, limiting the possibility of making these videos publicly
+available (Isard 2020).
+Skeletal Poses
+reduce the visual cues in videos to skeleton-like wireframes or mesh representing the location of
+joints. This technique has been extensively used in the field of computer vision to estimate human
+pose from video data, where the goal is to determine the spatial configuration of the body at each
+point in time. Although high-quality pose estimation can be achieved using motion capture
+equipment, such methods are often expensive and intrusive. As a result, estimating pose from
+videos has become the preferred method in recent years (Pishchulin et al. 2012; Chen et al. 2017;
+Cao et al. 2019; Güler, Neverova, and Kokkinos 2018). Compared to video representations,
+accurate skeletal poses have a lower complexity and provide a semi-anonymized representation of
+the human body, while observing relatively low information loss. However, they remain a
+continuous, multidimensional representation that is not adapted to most NLP models.
+Written notation systems
+represent signs as discrete visual features. Some systems are written linearly, and others use
+graphemes in two dimensions. While various universal (Sutton 1990; Prillwitz and
+Zienert 1990) and language-specific notation systems (Stokoe Jr 1960; Kakumasu 1968;
+Bergman 1977) have been proposed, no writing system has been adopted widely by any sign
+language community, and the lack of standards hinders the exchange and unification of resources
+and applications between projects. The figure above depicts two universal notation systems:
+SignWriting (Sutton 1990), a two-dimensional pictographic system, and HamNoSys (Prillwitz
+and Zienert 1990), a linear stream of graphemes designed to be machine-readable.
+Glosses
+are the transcription of signed languages sign-by-sign, with each sign having a unique semantic
+identifier. While various sign language corpus projects have provided guidelines for gloss
+annotation (Mesch and Wallin 2015; Johnston and De Beuzeville 2016; Konrad et al. 2018), a
+standardized gloss annotation protocol has yet to be established. Linear gloss annotations have
+been criticized for their imprecise representation of signed language. These annotations fail tocapture all the information expressed simultaneously through different cues, such as body posture,
+eye gaze, or spatial relations, leading to a loss of information that can significantly affect
+downstream performance on SLP tasks (Yin and Read 2020; Müller et al. 2023).
+Müller et al. (2023) conduct an extensive review of the use of glosses in sign language translation
+research and make the following recommendations for research using glosses:
+
+Demonstrate awareness of limitations of gloss approaches and explicitly discuss them.
+Focus on datasets beyond RWTH-PHOENIX-Weather-2014T (Camgöz et al. 2018).
+Openly discuss the limited size and linguistic domain of this dataset.
+Use metrics that are well-established in MT. If BLEU (Papineni et al. 2002) is used,
+compute it with SacreBLEU (Post 2018), report metric signatures and disable internal
+tokenization for gloss outputs. Do not compare to scores produced with a different or
+unknown evaluation procedure.
+Given that glossing is corpus-specific, process glosses in a corpus-specific way, informed
+by transcription conventions.
+Optimize gloss translation baselines with methods shown to be effective for low-resource
+MT.
+The following table additionally exemplifies the various representations for more isolated signs.
+For this example, we use SignWriting as the notation system. Note that the same sign might have
+two unrelated glosses, and the same gloss might have multiple valid spoken language translations.
+
+
+\section{Research problem/problem statement}
+%Replace "Heading 1" with what will become the \label{} for this section.
+\begin{itemize}
+	\item Show the problem
+	\item Showing the topic selection tool.
+	\item Explanation of the topic and introduction of the field of work and research.
+	\item What gaps were there when this research was conducted?
+\end{itemize}
+
+\begin{table}[h]
+    \begin{tabular}{|>{\bfseries}p{0.25\linewidth} | p{0.30\linewidth} | p{0.35\linewidth}|}
+        \hline
+        Column 1 &  \textbf{Column 2} &  \textbf{Column 3}\\ 
+        \hline
+        Lorem Ipsum   & Dolor sit amet    & Consectetur adipiscing\\ 
+        \hline
+        Vivamus luctus& Tempor incididunt & Magna aliqua\\ 
+        \hline
+        Ut enim ad    & Minim veniam      & Quis nostrud exercitation\\ 
+        \hline
+    \end{tabular}
+%    \caption{Lorem Ipsum}
+    \label{tab:1-1}
+\end{table}
+\section{The value and importance of the topic}
+\begin{itemize}
+	\item Because of the importance and value of expressing the value of the subject.
+	\item Why was this topic chosen by you and what are there benefits?
+
+\end{itemize}
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=1.0\textwidth]{Resources/KU1}
+\caption{The Computer science Faculty}
+\label{Figure:The Computer science Faculty}
+\end{center}
+\end{figure}
+
+% ***************************************************
+
+\section{Aims and objectives}
+\begin{itemize}
+	\item Objectives should be related to the questions, assignments, and main topic.
+	\item The number of goals should be selected based on the number of questions.
+	\item It is good to choose fewer goals. \cite{Pakzad2018}
+	
+\end{itemize}
+
+\section{Research and Topic questions}
+\begin{itemize}
+	\item The number of questions should be few and should not be broad and comprehensive.
+	\item The answers of the questions must be in the topic.
+	\item The question should be clear and not ambiguous.
+	\item Its limits should be clear and short.
+	
+\end{itemize}
+
+\section{Methodology}
+\lipsum[4]
+\lipsum[4]
+\lipsum[4]
+\lipsum[4]
+\lipsum[4]
+\lipsum[4]
+\lipsum[4]
+\lipsum[4]
+\lipsum[4]
+\lipsum[4]
+\section{Significance and audience}
+\section{Research Scope}
+\section{Expected outcome}
+\section{Monograph Structure}
+\section{Chapter Summary}
+
+\section{Problem Definition}
+
+Effective communication is essential for individuals to express their thoughts, feelings, and needs. However, for individuals with hearing impairments, spoken language may not be accessible. for those with hearing impairments or hard-of-hearing which can't hear other peoples also called deaf and have their own language which is called sign language.
+
+
+Sign language, a visual gesture language used by deaf and hard -of-hearing community plays a crucial role in facilitating communication. Sign language which enables communication through hand gestures, finger movements, facial expressions, and body posture. For deaf and hard-of-hearing communities, sign language serves as a primary means of communication and social interaction. Among the various components of sign language, finger spelling plays a critical role in representing alphabets, names, technical terms, and words that do not have dedicated signs.
+
+
+deaf people learn and understands sign language in their daily life but it is hard for those who don't know and understands sign language what dose every sign means, how they should performed it. It is even hard for the first time to communicate with deaf peoples because it takes time to learn sign language.
+
+Sign language recognition (SLR), the process of automatically recognizing and interpreting sign language gestures, has gained significant attention in recent years due to its potential to bridge the communication gap between the hearing impaired and the hearing world \cite{bibid}.
+
+In recent years, deep learning techniques have significantly advanced the field of Sign Language Recognition (SLR). Convolutional Neural Networks (CNNs) \cite{bibid} like \cite{bibid}, \cite{bibid}, \cite{bibid} have demonstrated strong performance in extracting discriminative spatial features from hand gesture images, while recurrent architectures such as Long Short-Term Memory (LSTM) \cite{bibid} networks and Transformer-based models have improved temporal modeling for dynamic gestures and continuous sign recognition. Several studies on American Sign Language (ASL) recognition have achieved high accuracy using lightweight and mobile-friendly architectures such as MobileNet, ResNet, and EfficientNet.
+
+
+Recent research has also integrated hand landmark detection frameworks such as MediaPipe with deep learning classifiers to improve real-time hand localization and recognition accuracy.
+
+
+Despite substantial progress in ASL and other widely studied sign languages, limited or almost no research exists for low-resource languages such as Dari Sign Language (DSL). The absence of publicly available datasets, standardized benchmarks, and mobile-oriented recognition systems has restricted the development of intelligent assistive technologies for the Dari-speaking deaf community. Furthermore, finger spelling recognition in DSL presents additional challenges due to variations in hand orientation, lighting conditions, background clutter, and signer diversity.
+
+To address these limitations, this work focuses on developing a real-time Dari Sign Language finger spelling recognition system using deep learning and computer vision techniques. The proposed framework employs hand detection and preprocessing methods to isolate the region of interest, followed by a lightweight MobileNet-based classifier optimized for deployment on edge devices. The trained model is converted into an efficient inference format for Mobile-based applications, enabling real-time recognition on resource-constrained hardware.
+
+The main contributions of this work can be summarized as follows:
+
+\begin{itemize}
+	\item Development of a custom Dari Sign Language finger spelling dataset for static gesture recognition.
+	\item Design of a lightweight CNN-based recognition framework optimized for real-time mobile inference.
+	\item Integration of computer vision techniques for hand detection and preprocessing.
+	\item Deployment of the trained model on Mobile devices for practical real-time sign language recognition.
+\end{itemize}
+
+This research aims to contribute toward accessible communication technologies for the Dari-speaking deaf community while also expanding research in low-resource sign languages and mobile-based deep learning systems.
+
+
+\section{Research Objectives}
+\begin{itemize}
+	\item Develop a real-time Dari Sign Language recognition system.
+	\item Create a custom DSL dataset.
+	\item Train deep learning models for sign classification.
+	\item Deploy the system on Mobile devices.
+\end{itemize}
+
+\section{Research Questions}
+\begin{enumerate}
+	\item Can deep learning models accurately recognize Dari sign language?
+	\item Which lightweight architecture performs best for mobile deployment?
+	\item How can real-time inference be optimized for smartphones?
+\end{enumerate}
+
+\section{Contributions}
+\begin{itemize}
+	\item A custom Dari Sign Language dataset.
+	\item A MobileNet-based recognition architecture.
+	\item Real-time and Local Mobile deployment using ExecuTorch.
+\end{itemize}
+
+
+\section{Background and Recent Research}
+
+%\textcite{Doe2015} beschreibt in seinem Ansatz\footcite{Doe2015}, dass sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat \parencite[vgl.][26]{Doe2015}.
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua\footnote{Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.}. 
+
+
+\section{Methodology}
+
+In \autoref{fig:imageYouCanReferTo} kann man sehr gut erkennen, dass es sich um ein Beispielbild handelt. Lorem ipsum dolor sit amet, 
+
+
+
+
+
+\section{Research problem/problem statement}
+%Replace "Heading 1" with what will become the \label{} for this section.
+\begin{itemize}
+	\item Show the problem
+	\item Showing the topic selection tool.
+	\item Explanation of the topic and introduction of the field of work and research.
+	\item What gaps were there when this research was conducted?
+\end{itemize}
+
+\begin{table}[h]
+	\begin{tabular}{|>{\bfseries}p{0.25\linewidth} | p{0.30\linewidth} | p{0.35\linewidth}|}
+		\hline
+		Column 1 &  \textbf{Column 2} &  \textbf{Column 3}\\ 
+		\hline
+		Lorem Ipsum   & Dolor sit amet    & Consectetur adipiscing\\ 
+		\hline
+		Vivamus luctus& Tempor incididunt & Magna aliqua\\ 
+		\hline
+		Ut enim ad    & Minim veniam      & Quis nostrud exercitation\\ 
+		\hline
+	\end{tabular}
+	%    \caption{Lorem Ipsum}
+	\label{tab:1-1}
+\end{table}
+\section{The value and importance of the topic}
+\begin{itemize}
+	\item Because of the importance and value of expressing the value of the subject.
+	\item Why was this topic chosen by you and what are there benefits?
+	
+\end{itemize}
+
+\section{Aims and objectives}
+\begin{itemize}
+	\item Objectives should be related to the questions, assignments, and main topic.
+	\item The number of goals should be selected based on the number of questions.
+	\item It is good to choose fewer goals.
+	
+\end{itemize}
+
+\section{Research and Topic questions}
+\begin{itemize}
+	\item The number of questions should be few and should not be broad and comprehensive.
+	\item The answers of the questions must be in the topic.
+	\item The question should be clear and not ambiguous.
+	\item Its limits should be clear and short.
+	
+\end{itemize}
+

@@ -1,0 +1,196 @@
+
+
+% ***************************************************
+% Arranged by: Abdul Waris Ayazi
+% Date : 2026 - March - 11
+% Kabul University
+% ***************************************************
+
+
+\documentclass[instructions]{StylesAndSettings/uqthesis}
+%\documentclass[final]{StylesAndSettings/uqthesis} 
+
+
+\setlength{\footskip}{9mm}
+
+\input{dsfont.sty}
+
+\input{StylesAndSettings/LaTexPackages.tex}
+
+% ***************************************************
+% Title page
+% ***************************************************
+
+%***THESIS TITLE***
+%Use Sentence Case (capitalise only the first word and proper nouns).
+\title{Sign Language }
+
+%***YOUR NAME***
+%Do not include initials or middle names.
+\author{Waris Mustafa}
+
+
+%***Full Name of supervisor***
+\supervisor{Dr. Nesar Ahmad Wasi}
+
+%***YEAR OF SUBMISSION***
+\date{May 2026}
+
+
+%HBAR fix added by Michael
+% (this issue is related to the use of the mathptmx package)
+\begin{document}
+\renewcommand{\hbar}{\mathchar'26\mkern-7.5mu h}
+
+
+\frontmatter
+
+% Assemble title page
+\maketitle
+\clearpage
+\setcounter{page}{1}
+
+
+% Preface
+%****************************************************
+\pagestyle{plain}
+\newpage
+\null
+\newpage
+\begin{figure}[t!] 
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{Resources/start}
+	\end{center}
+	\label{fig:resnet}
+\end{figure}
+\clearpage
+\pagestyle{plain}
+
+
+\newpage
+\null
+\newpage
+\input{./PreliminaryPages/Certificate.tex}
+\newpage
+\null
+\newpage
+
+
+\clearpage
+\pagestyle{plain}
+\section*{Abstract}
+\normalfont
+
+%Open abstract.tex to edit
+\input{./PreliminaryPages/Abstract.tex}
+
+\clearpage
+
+\input{./PreliminaryPages/Preliminary.tex}
+\clearpage
+
+
+% ***************************************************
+% Header and Foote
+%****************************************************
+\pagestyle{fancy}
+% Clear default header/footer
+\fancyhf{}
+
+% Even pages (left side): Chapter title
+\fancyhead[LE]{\nouppercase{\leftmark}}
+
+% Odd pages (right side): Section title
+\fancyhead[RO]{\nouppercase{\rightmark}}
+
+% Page number at footer center
+\fancyfoot[C]{\thepage}
+
+\renewcommand{\chaptermark}[1]{%
+	\markboth{#1}{}}
+
+\renewcommand{\sectionmark}[1]{%
+	\markright{\thesection\ #1}}
+
+
+
+
+%YOU MUST EDIT THIS DOCUMENT.
+
+% ***************************************************
+% Thesis Content
+%****************************************************
+
+\mainmatter
+%Each chapter is a separate .tex file. Use \input to load them here, as demonstrated below for Chapter 1 and Chapter 2.
+%We recommend keeping each in a separate subfolder, with its accompanying figures, etc. This is how the template is currently structured.
+%If you wish to divide your thesis into parts (each containing multiple chapters), us the \part{} command.
+
+
+
+%CHAPTER 1
+\input{./Chapter1/Introduction.tex}
+
+%CHAPTER 2
+\input{./Chapter2/LiteratureReview.tex}
+
+%CHAPTER 3
+\input{./Chapter3/Methodology.tex}
+
+%CHAPTER 4
+\input{./Chapter4/Design.tex}
+
+%CHAPTER 5
+\input{./Chapter5/Implementation.tex}
+
+%CHAPTER 6
+\input{./Chapter6/Results.tex}
+
+%CHAPTER 6
+\input{./Chapter7/Discussion.tex}
+
+
+% HOW TO ADD ADDITIONAL CHAPTERS
+% Step One: Add a new folder called "ChapterX" (X being the chapter number).
+% Step Two: Within the folder add a new .tex file by clicking the "New File" button in the Overleaf Menu. Rename the file to a title of your choice.
+% Step Three: Copy the Chapter 2 headline and "\input" command located above and insert it below Chapter 2.
+% Step Four: Rename the headline to your specific chapter number, change the input command to include the name of the folder you created and the name of the file you created.
+% Repeat this process for every chapter.
+
+%CONCLUSION CHAPTER
+\input{./Conclusion/Conclusion.tex}
+
+% ***************************************************
+% References
+%****************************************************
+
+%CHOOSE YOUR BIB STYLE AND FILE.
+%We have included the following two referencing styles for you to use in your thesis. You can add an alternate style if you prefer.
+
+%Style: apalike = this is an (Author, Year) referencing style similar to APA
+%Style: elsarticle-num = this is a numbered referencing style that will display the bibliography in citation order
+
+%To use one of the styles provided ensure the % is removed from the start of the line, and the other option is commented out with a % at the start of the line. The style elsarticle-num is active by default.
+
+\bibliographystyle{apalike}
+%\bibliographystyle{elsarticle-num}
+
+\bibliography{./References/References}
+
+\noindent \\
+Use the referencing style appropriate to your \cite{Adachi2007} discipline refer to the \href{https://ku.edu.af}{\color{blue}{Kabul University}} for details.  
+
+%When you have finished your thesis we recommend that you manually fix any errors in your bibliography. 
+%To do this, compile, copy the .bbl into a new .tex file and include this here after commenting out the other bibliography commands. Make corrections in that .tex file.
+
+% ***************************************************
+% Appendices
+%**************************************************** 
+
+%UNCOMMENT THIS SECTION IF YOU ARE USING APPENDICES.
+%Simply adapt the same formatting used for other chapters.
+\appendix
+% If you need appendix in your thesis then consider the following appendix file (you can add more if you need more) otherwise you should not consider it in your main thesis.
+\include{./Appendix/Appendix}
+
+\end{document}
